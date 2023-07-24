@@ -67,7 +67,8 @@ mysql> SHOW DATABASES;
 
 slave:
 ```bash
-mysql> CHANGE MASTER TO MASTER_HOST='192.168.1.192', MASTER_USER='replication', MASTER_LOG_FI  LE='mysql-bin.000006', MASTER_LOG_POS=1257;
+mysql> CHANGE MASTER TO MASTER_HOST='192.168.1.192', MASTER_USER='replication', MASTER_LOG_FI  LE='mysql-bin.000006',
+ MASTER_LOG_POS=1257;
 Query OK, 0 rows affected, 7 warnings (0,16 sec)
 
 mysql> START SLAVE;
