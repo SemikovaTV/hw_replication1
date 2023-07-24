@@ -19,11 +19,12 @@
 
 Выполните конфигурацию master-slave репликации, примером можно пользоваться из лекции.
 
+*Приложите скриншоты конфигурации, выполнения работы: состояния и режимы работы серверов.*
+
 Настройки на master:
 ```bash
 mkdir -p /var/log/mysql
 chown mysql: /var/log/m
-
 nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
 Настройки на slave:
@@ -37,7 +38,6 @@ nano /etc/mysql/mysql.conf.d/mysqld.cnf
 systemctl restart mysql.service
 
 mysql -u root -p
-
 
 mysql> CREATE USER 'replication'@'%';
 Query OK, 0 rows affected (0,03 sec)
@@ -143,8 +143,3 @@ Master_SSL_Verify_Server_Cert: No
 
 Далее произведем проверку - создадим на master базу REPLICATEST и проверим ее на slave:
 ![alt text](https://github.com/SemikovaTV/hw_replication1/blob/main/6.jpg)
-
-
-
-*Приложите скриншоты конфигурации, выполнения работы: состояния и режимы работы серверов.*
-
